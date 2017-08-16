@@ -1,0 +1,36 @@
+<div>
+	<h1>Player 1</h1>
+	<form action="" (submit)='getUser("player1")' *ngIf='!players.player1.found'>
+		<label for="name">Github Username:</label>
+		<input type="text" name="name" id="name"
+		[(ngModel)]='players.player1.name'
+		>
+		<button>Get User</button>
+	</form>
+	<div *ngIf='players.player1.found'>
+		<img src="{{players.player1.url}}" alt="">
+		<p>{{players.player1.name}}</p>
+	</div>
+
+
+
+</div>
+<div>
+	<h1>Player 2</h1>
+	<form action="" (submit)='getUser("player2")' *ngIf='!players.player2.found'>
+		<label for="name">Github Username:</label>
+		<input type="text" name="name" id="name"
+		[(ngModel)]='players.player2.name'
+		>
+		<button>Get User</button>
+	</form>
+	<div *ngIf='players.player2.found'>
+		<img src="{{players.player2.url}}" alt="">
+		<p>{{players.player2.name}}</p>
+	</div>
+
+
+</div>
+<button *ngIf='players.player1.found && players.player2.found'
+(click)='showResults() '
+>BATTLE</button>

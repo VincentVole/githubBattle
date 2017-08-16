@@ -1,0 +1,13 @@
+<div>
+	<h1>1st Place</h1>
+	<p *ngIf='player1.score >= player2.score'>{{player1.name}} ({{player1.score}} points)</p>
+	<p *ngIf='player1.score < player2.score'>{{player2.name}} ({{player2.score}} points)</p>
+	<h1>2nd Place</h1>
+	<p *ngIf='player1.score >= player2.score'>{{player2.name}} ({{player2.score}} points)</p>
+	<p *ngIf='player1.score < player2.score'>{{player1.name}} ({{player1.score}} points)</p>
+
+	<img src="{{player1.url}}" alt="" *ngIf='player1.score >= player2.score'>
+	<img src="{{player2.url}}" alt="" *ngIf='player1.score < player2.score'>
+	<p *ngIf='player1.score >= player2.score'>{{player1.name}} ({{player1.score}} points)</p>
+	<p *ngIf='player1.score < player2.score'>{{player2.name}} ({{player2.score}} points)</p>
+</div>

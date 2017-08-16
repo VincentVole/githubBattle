@@ -1,0 +1,7 @@
+<div>
+	<div *ngFor='let fighter of fighters; let i = index'>
+		<p>#{{i+1}}</p>
+		<img src="{{fighter.url}}" alt="">
+		<p>{{fighter.name}} - score: {{fighter.score}}</p>
+	</div>
+</div>
